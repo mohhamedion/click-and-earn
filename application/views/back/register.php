@@ -78,8 +78,8 @@
 		<div class="error-page-int">
 			<div class="text-center custom-login">
 				<h3>Registration</h3>
-				<p>This is the best app ever!</p>
-<?php if($this->session->flashdata("error")):?>
+<!-- 				<p>This is the best app ever!</p>
+ --><?php if($this->session->flashdata("error")):?>
 <div class="alert alert-danger">
 
 <?php
