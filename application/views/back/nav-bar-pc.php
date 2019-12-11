@@ -48,6 +48,10 @@
                             </ul>
                         </li>
  
+                          <li>
+                            <a title="Landing Page" href="<?php echo base_url().$this->session->userdata("role"); ?>/Withdraw" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Withdraw</span></a>
+                        </li>
+
 
                   
 <?php endif; ?>
@@ -64,14 +68,13 @@
                             </ul>
                         </li>
 
-
-
+                     
                         <li>
                             <a title="Landing Page" href="<?php echo base_url().$this->session->userdata("role"); ?>/Users" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Users</span></a>
                         </li>
 
 
-<?php if($this->session->userdata("role")=="admin"): ?>
+            <?php if($this->session->userdata("role")=="admin"): ?>
 
                         <li>
                             <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-professor  icon-wrap"></span> <span class="mini-click-non">Manage Links</span></a>
@@ -200,7 +203,7 @@
                                 <li><a title="404 Page" href="404.html"><span class="mini-sub-pro">404 Page</span></a></li>
                                 <li><a title="500 Page" href="500.html"><span class="mini-sub-pro">500 Page</span></a></li></ul>
  -->
-                                                    </li>
+                                                   <!--  </li> -->
                     </ul>
                 </nav>
             </div>

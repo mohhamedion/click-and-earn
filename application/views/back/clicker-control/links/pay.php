@@ -77,7 +77,16 @@
 
 
                                                           <?php else: ?>
+
+                                                            <?php   if($link->status=="published"): ?>
+
+                                                                    <div class="alert alert-success bg-primary"  ><?php echo $link->status; ?></div>
+                                                                    <?php   else: ?>
+                                                                      
                                                                     <div class="alert alert-primary bg-primary"  ><?php echo $link->status; ?></div>
+                                                    <?php endif; ?>
+
+
 
                                                     <?php endif; ?>
                                                                     Note:

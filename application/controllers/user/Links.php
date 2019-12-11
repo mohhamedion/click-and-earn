@@ -167,7 +167,7 @@ if($payment){
 
    $id = $this->input->post("id");
 
-   $check_if_clicked = $this->General_model->get_row("userClicks",["link_id"=>$id,"user_id"=>$this->session->userdata("user_id")]);
+   $check_if_clicked = $this->General_model->get_row("userclicks",["link_id"=>$id,"user_id"=>$this->session->userdata("user_id")]);
 
  
   if(empty($check_if_clicked)){
@@ -180,11 +180,15 @@ if($payment){
   $this->General_model->update_by_table("links",["clicks"=>$clicks-1],["id"=>$id]);
 
  	$create_click = 
-  $this->General_model->create_by_table("userClicks",["user_id"=>$this->session->userdata("user_id"),"link_id"=>$id],1);
+  $this->General_model->create_by_table("userclicks",["user_id"=>$this->session->userdata("user_id"),"link_id"=>$id],1);
 	 
-  $create_earning = 
+   if($this->session->userdata("role")=="user"){
+$create_earning = 
   $this->General_model->create_by_table("earnings",["user_id"=>$this->session->userdata("user_id"),"earning_method_id"=>$create_click,"earning_method"=>"click","amount"=>2/1000]);
 
+    
+   }
+  
         
        	  }else{
        	  return	http_response_code(500);

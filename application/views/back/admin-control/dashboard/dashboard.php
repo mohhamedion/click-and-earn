@@ -129,7 +129,7 @@
                                     <i class="educate-icon educate-apps"></i>
                                 </div>
                                 <div class="m-t-xl widget-cl-1">
-                                    <h1 class="text-success"><?php echo  $payments_amount[0]->c; ?></h1>
+                                    <h1 class="text-success"><?php echo  $payments_amount[0]->c; ?>$</h1>
                                     <small>
                                               
                                             </small>
@@ -219,7 +219,7 @@
                             <div class="panel-body">
                                 <div class="table-responsive wd-tb-cr">
                                     <table class="table table-striped">
-                                        <p>information</p>
+                                        <h4>Information</h4>
                                         <thead>
                                             <tr>
                                                 <th>note</th>
@@ -516,12 +516,12 @@
                          </div>
                     </div>
 
- <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+<!--  <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                         <div class="analytics-edu-wrap ant-res-b-30 reso-mg-b-30">
                                               <div id="line_top_x"></div>
 
 
-                         </div>
+                         </div> -->
                     </div>
                </div>
             </div>
@@ -529,8 +529,8 @@
 
 
 
-    <div id="regions_div" style="width: 900px; height: 500px;"></div>
-
+<!--     <div id="regions_div" style="width: 900px; height: 500px;"></div>
+ -->
 
 
 

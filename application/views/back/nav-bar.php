@@ -29,6 +29,8 @@
                                                 <li class="nav-item"><a href="<?php echo base_url() ?>user/links" class="nav-link">Links</a>
                                                 </li>
 
+
+<?php if($this->session->userdata("role")=="user"): ?>
                                                 <li class="nav-item"><a href="#" class="nav-link">Balance: <span class="balance"></span></a>
                                                 </li>
                                             
@@ -41,9 +43,9 @@
                                                         <a href="#" class="dropdown-item">Contact Support</a>
                                                     </div>
                                                 </li> -->
-                                                <li class="nav-item"><a href="<?php echo base_url() ?>user/withdraw" class="nav-link">widthraws</a>
+                                                <li class="nav-item"><a href="<?php echo base_url() ?>user/withdraw" class="nav-link">Withdraw</a>
                                                 </li>
-
+<?php endif; ?>
                                                  <li class="nav-item"><a href="<?php echo base_url().$this->session->userdata("role") ?>/links/add" class="nav-link btn btn-warning">Add your domain</a>
                                                 </li>
                                             </ul>
@@ -194,9 +196,11 @@
 
 
                                                     <ul role="menu" class="dropdown-header-top author-log dropdown-menu animated zoomIn">
-                                                        
+                                                        <?php if($this->session->userdata("role")=="user"): ?>
                                                         <li><a href="<?php echo base_URL() ?>user/payments"><span class="edu-icon edu-money author-log-ic"></span>User Billing</a>
                                                         </li>
+
+                                                    <?php endif ?>
                                                         <li><a href="<?php echo base_URL() ?>user/welcome/settings"><span class="edu-icon edu-settings author-log-ic"></span>Settings</a>
                                                         </li>
                                                         <li><a href="<?php echo base_URL() ?>welcome/logout"><span class="edu-icon edu-locked author-log-ic"></span>Log Out</a>
@@ -674,13 +678,81 @@
 
 
 
+                        <li>
+                            <a title="Landing Page" href="<?php echo base_url().$this->session->userdata("role"); ?>" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Dashboard</span></a>
+                        </li>
 
 
 
 
 
 
+<?php if($this->session->userdata("role")=="user"): ?>
 
+       <li>
+                            <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-professor  icon-wrap"></span> <span class="mini-click-non">Links</span></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+
+                                <li><a title="All Links" href="<?php echo base_url() ?>user/links"><span class="mini-sub-pro">All Links</span></a></li>
+                                <li><a title="Add Domain" href="<?php echo base_url() ?>user/links/add"><span class="mini-sub-pro">Add domain</span></a></li>
+                                <li><a title="My Domains" href="<?php echo base_url() ?>user/links/mylinks"><span class="mini-sub-pro">My Domains</span></a></li>
+                             
+                            </ul>
+                        </li>
+ 
+           <li>
+                            <a title="Landing Page" href="<?php echo base_url().$this->session->userdata("role"); ?>/Withdraw
+" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Withdraw</span></a>
+                        </li>
+
+          
+<?php endif; ?>
+
+<?php if($this->session->userdata("role")=="admin"): ?>
+
+                        <li>
+       <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-professor  icon-wrap"></span> <span class="mini-click-non">widthdraws</span></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+
+            <li><a title="All Links" href="<?php echo base_url() ?>admin/Widthraws"><span class="mini-sub-pro">All Widthraws</span></a></li>
+            <li><a title="Add Domain" href="<?php echo base_url() ?>admin/Widthraws/requests"><span class="mini-sub-pro">Requests</span></a></li>
+                              
+                            </ul>
+                        </li>
+
+
+
+                        <li>
+                            <a title="Landing Page" href="<?php echo base_url().$this->session->userdata("role"); ?>/Users" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Users</span></a>
+                        </li>
+
+
+<?php if($this->session->userdata("role")=="admin"): ?>
+
+                        <li>
+                            <a class="has-arrow" href="#" aria-expanded="false"><span class="educate-icon educate-professor  icon-wrap"></span> <span class="mini-click-non">Manage Links</span></a>
+                            <ul class="submenu-angle" aria-expanded="false">
+
+                                <li><a title="All Links" href="<?php echo base_url() ?>admin/links"><span class="mini-sub-pro">All Links</span></a></li>
+                                <li><a title="Add Domain" href="<?php echo base_url() ?>admin/links/add"><span class="mini-sub-pro">Add domain</span></a></li>
+                                     <li><a title="My Domains" href="<?php echo base_url() ?>admin/links/mylinks"><span class="mini-sub-pro">My Domains</span></a></li>
+                              
+                             
+                            </ul>
+                        </li>
+<?php endif; ?>
+
+
+
+
+<?php endif; ?>
+
+
+
+
+
+
+<!-- 
 
 
 
@@ -853,7 +925,13 @@
                                                 <li><a href="password-recovery.html">Password Recovery</a>
                                                 </li>
                                                 <li><a href="404.html">404 Page</a></li>
-                                                <li><a href="500.html">500 Page</a></li>
+                                                <li><a href="500.html">500 Page</a></li> -->
+
+
+
+
+
+                                                
                                             </ul>
                                         </li>
                                     </ul>

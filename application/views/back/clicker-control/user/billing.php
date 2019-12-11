@@ -48,6 +48,16 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+
+                                            <?php if(empty($payments)): ?>
+                                                  <tr>
+                                                <td>you don't have any billing yet</td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            </tr>
+                                            <?php endif; ?>
                                         	<?php foreach ($payments as $pay) : ?>
                                             <tr>
                                                 <td><?php echo $pay->id ?></td>

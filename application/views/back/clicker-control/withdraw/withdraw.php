@@ -24,7 +24,7 @@
                                             <div class="review-content-section">
                                                 <div id="dropzone1" class="pro-ad addcoursepro">
 
-                                                     <h4 class="">widthdraw your balance</h4>
+                                                     <h4 class="">Withdraw your balance</h4>
 
 
                                                     <form action="<?php echo base_URL() ?>user/Withdraw/add" class="dropzone dropzone-custom needsclick addlibrary" id="demo1-upload" method="POST">
@@ -93,7 +93,7 @@
                                                             <div class="col-lg-12">
                                                                 <div class="payment-adress">
                                                                     <?php if(!$request): ?>
-                                                                    <button type="submit" class="btn btn-primary waves-effect mb-3 waves-light">Send Request to withraw</button>
+                                                                    <button type="submit" class="btn btn-primary waves-effect mb-3 waves-light">Send Request to Withdraw</button>
                                                                 <?php endif; ?>
 
                                                                 <?php if($request): ?>

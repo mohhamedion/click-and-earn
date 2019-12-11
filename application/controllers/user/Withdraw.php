@@ -6,7 +6,7 @@ class Withdraw extends CI_Controller {
 function __construct(){
 parent::__construct();
 
-if($this->session->userdata("user")=="role"){
+if($this->session->userdata("role")=="user"){
 
 return true;
 
@@ -141,6 +141,9 @@ return (int)$str;
 				"date"=>date("Y-m-d")
 			]);
 			
+
+		}else{
+						$this->session->set_flashdata("err", "you can't withdraw less than 0.02");
 
 		}
 

@@ -28,10 +28,10 @@ $data["countries"] = $this->General_model->_query("
  
 
 $data["links"] = $this->General_model->_query("
-			SELECT links.link, (select count(id) from userClicks where userClicks.link_id = links.id) as c from links 
+			SELECT links.link, (select count(id) from userclicks where userclicks.link_id = links.id) as c from links 
 		");
 $data["active_users"] = $this->General_model->_query("
-			SELECT users.email,users.id , (select count(id) from userClicks where userClicks.user_id = users.id) as c from users 
+			SELECT users.email,users.id , (select count(id) from userclicks where userclicks.user_id = users.id) as c from users 
 		");
 	
 $data["payments_amount"] = $this->General_model->_query("

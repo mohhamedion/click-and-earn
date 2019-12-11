@@ -35,12 +35,12 @@ redirect(base_url()."welcome/login");
 		   $invites = $this->General_model->
 		_query("select COUNT(*) as x  from earnings where user_id= '".$this->session->userdata("user_id")."' AND earning_method ='share'  ");
 
-
+		
 		$data["balance"]      = number_format($earnings[0]->x, 3, '.', '');
 		$data["all_earnings"] = number_format($all_earnings[0]->x, 3, '.', '');
 	    $data["main_view"]    = "back/clicker-control/dashboard/dashboard";
 		$data["invites"]      = $invites[0]->x;
-		$data["clicks"]       = $this->General_model->get_num_rows("userClicks",["user_id"=>$this->session->userdata("user_id")]);
+		$data["clicks"]       = $this->General_model->get_num_rows("userclicks",["user_id"=>$this->session->userdata("user_id")]);
 
 		$data["running_out"]  = $this->General_model->get_table("links",["user_id"=>$this->session->userdata("user_id"),"clicks<"=>100]);
 		$data["request"]      = $this->General_model->get_table("request",["user_id"=>$this->session->userdata("user_id")]);

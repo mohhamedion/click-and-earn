@@ -92,7 +92,8 @@
                                                 </td>
                                                 <td><?php echo $user->clicks ?></td>
                                                 <td>$<?php echo  number_format($user->earnings, 4, '.', ''); ?></td>
-                                                 <td class="datatable-ct"><i class="btn btn-danger">show Activites</i>
+                                                 <td class="datatable-ct">
+                                                    <a href="<?php base_url() ?>users/Activites/<?php echo $user->id ?>"><i class="btn btn-danger">show Activites</i></a>
                                                  </td>  
                                             </tr>
                                  <?php endforeach; ?>
