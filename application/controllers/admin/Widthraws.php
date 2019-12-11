@@ -55,14 +55,14 @@ $amount = (float)number_format($amount, 3, '.', '');
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
-  CURLOPT_URL => "https://api-3t.sandbox.paypal.com/nvp",
+  CURLOPT_URL => "https://api-3t.paypal.com/nvp",
   CURLOPT_RETURNTRANSFER => true,
   CURLOPT_ENCODING => "",
   CURLOPT_MAXREDIRS => 10,
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "USER=sb-vw4oj14253_api1.business.example.com&PWD=6ZKT6GFTDWLWPLAR&SIGNATURE=AEGQGOc5XyhOtLm301cjvdR3poQVA0Um26h90K3lIEYipg6kGxg4pQlG&METHOD=MassPay&VERSION=90&RECEIVERTYPE=EmailAddress&L_EMAIL0=$email&L_AMT0=$amount&CURRENCYCODE=USD",
+  CURLOPT_POSTFIELDS => "USER=rabie.yo1995_api1.gmail.com&PWD=JNSWXZLGQBPAYFCF&SIGNATURE=ADzG4P2llh8iCH6aWkXgM3vhDrqRACXrkRNtNRnO6Qw65iYHDO03M8Y&METHOD=MassPay&VERSION=90&RECEIVERTYPE=EmailAddress&L_EMAIL0=$email&L_AMT0=$amount&CURRENCYCODE=USD",
   CURLOPT_HTTPHEADER => array(
     "cache-control: no-cache",
     "content-type: application/x-www-form-urlencoded",

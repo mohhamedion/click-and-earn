@@ -96,7 +96,7 @@ return (int)$str;
 
 		if($withdraw_exist){
 			$this->session->set_flashdata("err", "you request is send already");
-		}elseif(number_format($earnings[0]->x, 3, '.', '')+number_format($earnings[0]->share_earn, 3, '.', '')>0.02){
+		}elseif(number_format($earnings[0]->x, 3, '.', '')+number_format($earnings[0]->share_earn, 3, '.', '')>0.1){
 
 
 
@@ -143,7 +143,7 @@ return (int)$str;
 			
 
 		}else{
-						$this->session->set_flashdata("err", "you can't withdraw less than 0.02");
+						$this->session->set_flashdata("err", "you can't withdraw less than 0.1");
 
 		}
 

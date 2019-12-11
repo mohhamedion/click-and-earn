@@ -165,10 +165,9 @@
 
 
     <!-- Set up a container element for the button -->
- 
-
-    <!-- Include the PayPal JavaScript SDK -->
-    <script src="https://www.paypal.com/sdk/js?client-id=AYLd0gsWQQMQ8swPIS3__LeLI7M3Z72Y7zk0Pv0MUwrwYn5ME-e8ogpvAacGvJDU3-QPw_sBtZks3Yml&currency=USD"></script>
+<!--  AYLd0gsWQQMQ8swPIS3__LeLI7M3Z72Y7zk0Pv0MUwrwYn5ME-e8ogpvAacGvJDU3-QPw_sBtZks3Yml
+ -->    <!-- Include the PayPal JavaScript SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=Ad3Jws1Zh5jhp0QniH0w2lQXe0vsVV-sICsQscbaF67rY2jpnyNwplnrGe8kVDCdlUdGNgZHU3JFfb_Z&currency=USD"></script>
     <script>
 
 
@@ -184,7 +183,7 @@ let link_id = "<?php echo $link->id; ?>";
 
 
         $("#paypal-button-container").change(function(){
-          alert("asdas");
+          // alert("asdas");
         })
         
 

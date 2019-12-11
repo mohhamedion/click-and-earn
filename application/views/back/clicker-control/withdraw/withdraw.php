@@ -49,7 +49,7 @@
                                                                   <div class="form-group"> 
                                                             
 
-                                                                    <div class="alert alert-warning ">you can't withraw less than 0.20$ </div>
+                                                                    <div class="alert alert-warning ">you can't withraw less than 0.1$ </div>
 
 
 
