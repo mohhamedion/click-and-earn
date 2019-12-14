@@ -23,7 +23,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/click-earn/';
+
+$status = 'test';
+$site = 'http://localhost/click-earn/';
+if($status!='test'){
+	$site = "https://click-and-earn.com/";
+}
+
+$config['base_url'] = $site;
 
 /*
 |--------------------------------------------------------------------------

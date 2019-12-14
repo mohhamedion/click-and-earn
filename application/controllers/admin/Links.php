@@ -99,6 +99,7 @@ if($id!=null){
 
         $arr= $this->input->post();
         $arr['status'] = 'published';
+        $arr['user_id'] = $this->session->userdata("user_id");
         $link = $this->General_model->create_by_table("links",$arr,1);
        
        if($link){
@@ -134,7 +135,7 @@ if($id!=null){
 
 $query = 
 "
-SELECT *,users.first_name,users.last_name,users.email,links.id from links,users where  users.id=links.user_id group by links.id
+SELECT *,users.first_name,users.last_name,users.email,links.id from links,users where  users.id=links.user_id 
  ";
 
 $query2 = "select * from links where status !='draft'  AND clicks >0";

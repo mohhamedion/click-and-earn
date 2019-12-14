@@ -1,5 +1,5 @@
        <!-- Single pro tab review Start-->
-        <div class="single-pro-review-area mt-t-30 mg-b-15">
+        <div class="single-pro-review-area mt-t-30 mg-b-15" style="margin-top: 50px">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -24,7 +24,7 @@
                                             <div class="review-content-section">
                                                 <div id="dropzone1" class="pro-ad addcoursepro">
 
-                                                     <h4 class="">Withdraw your balance</h4>
+                                                     <h4 class="">Withdraw your balance 💰</h4>
 
 
                                                     <form action="<?php echo base_URL() ?>user/Withdraw/add" class="dropzone dropzone-custom needsclick addlibrary" id="demo1-upload" method="POST">

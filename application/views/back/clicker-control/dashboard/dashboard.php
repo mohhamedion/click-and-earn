@@ -1,4 +1,4 @@
-       <div class="breadcome-area " style="margin-top: 30px;">
+       <div class="breadcome-area " style="margin-top: 50px;">
                 <div class="container-fluid ">
                     <div class="row">
                      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -6,7 +6,7 @@
                                 <div class="row">
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <div class="bread ing">
-                            <input type="" name="share-link" class="form-control" value="<?php echo base_URL() ?>welcome/register/<?php echo $this->session->userdata("user_id"); ?>"  readonly>  let your friends sign in from this link and earn 0.20$  
+                            <input type="" name="share-link" class="form-control" value="<?php echo base_URL() ?>welcome/register/<?php echo $this->session->userdata("user_id"); ?>"  readonly>  let your friends sign in from this link and earn 0.20$  🤑
                                         </div>
                                     </div>
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
@@ -38,9 +38,9 @@
                                     <i class="educate-icon educate-apps"></i>
                                 </div>
                                 <div class="m-t-xl widget-cl-1">
-                                    <h1 class="text-success"><?php echo $balance; ?></h1>
+                                    <h1 class="text-success"><?php echo $balance; ?>💲</h1>
                                     <small>
-												this is your current balance now <strong><?php if($balance<=0.20){ echo "you can't widthraw less than 0.20";} ?></strong>  .
+												this is your current balance now <strong><?php if($balance<=0.20){ echo "you can't widthraw less than 0.1";} ?></strong>  .
 											</small>
                                 </div>
                             </div>
@@ -92,7 +92,7 @@
                                     <i class="educate-icon educate-message"></i>
                                 </div>
                                 <div class="m-t-xl widget-cl-4">
-                                    <h1 class="text-danger"><?php echo $all_earnings; ?></h1>
+                                    <h1 class="text-danger"><?php echo $all_earnings; ?>💲</h1>
                                     <small>
 												this is include the earnings that you already widthraw to your account<strong></strong> 
 											</small>

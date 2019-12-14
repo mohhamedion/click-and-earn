@@ -1,9 +1,9 @@
-       <div class="product-status mg-b-15">
+       <div class="product-status mg-b-15" style="margin-top: 60px">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="product-status-wrap">
-                            <h4>Links</h4>
+                            <h4>Visit all sites and earn 0.002$ for each &#128512;</h4>
                            <!--  <div class="add-product">
                                 <a href="#">Add Library</a>
                             </div> -->
@@ -13,7 +13,7 @@
                                         <th>No</th>
                                         <th>Name of Website</th>
                                         <th>Link</th>
-                                        <th>clcik left</th>
+                                        <th>click left</th>
                                       
                                     </tr>
                                         <?php foreach($links as $link): ?>
