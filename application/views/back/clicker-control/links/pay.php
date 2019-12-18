@@ -56,11 +56,11 @@
 
                                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                  <div class="form-group">
-
+                                                                      <label>Domain</label>
                                                                     <input name="link" type="text" class="form-control" value="<?php echo $link->link; ?>"  <?php echo $req; ?>  >
                                                                 </div>
                                                                 <div class="form-group">
-                                                                 <label>website name</label>
+                                                                 <label>Website Name</label>
              
                                                                     <input name="website_name" type="link" class="form-control" placeholder="" value="<?php echo $link->website_name; ?>" <?php echo $req; ?> >
 

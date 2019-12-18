@@ -46,21 +46,13 @@
                                                     <form action="<?php echo base_URL() ?>admin/links/APIupdate/<?php echo $link->id ?>" class="dropzone dropzone-custom needsclick addlibrary" id="demo1-upload" method="POST">
                                                         <div class="row">
 
-<!-- 
-                                                            <?php if($link->status=="published"){
-                                                               $req = "";
-                                                            }else{
-                                                              $req='';
-                                                            } ?>
- -->
-
                                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                  <div class="form-group">
-
-                                                                    <input name="link" type="text" class="form-control" value="<?php echo $link->link; ?>"     >
+                                                                        <label>Domain</label>
+                                                                    <input name="link" type="text" class="form-control" value="<?php echo $link->link; ?>"   required  >
                                                                 </div>
                                                                 <div class="form-group">
-                                                                 <label>website name</label>
+                                                                 <label>Website Name</label>
              
                                                                     <input name="website_name" type="link" class="form-control" placeholder="" value="<?php echo $link->website_name; ?>"   >
 

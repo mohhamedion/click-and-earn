@@ -82,13 +82,18 @@ redirect(base_url()."welcome/login");
 //////////////////////////////////////////////API
 
 
-  public function delete($id){
+  public function delete($id,$redirect=null){
 
 
 if($id!=null){
          $this->General_model->delete("links",["id"=>$id]);
 }
 
+if($redirect){
+
+          redirect(base_url()."admin/links/$redirect");
+
+}
         redirect(base_url()."admin/links/");
 
   }
@@ -100,6 +105,18 @@ if($id!=null){
         $arr= $this->input->post();
         $arr['status'] = 'published';
         $arr['user_id'] = $this->session->userdata("user_id");
+
+        $link = $this->input->post("link");
+
+         if(substr($link,0,8)=="https://"){
+            $link = substr($link,8);
+
+        }elseif(substr($link,0,7)=="http://"){
+            $link = substr($link,7);
+        }
+
+
+        $arr["link"] = $link;
         $link = $this->General_model->create_by_table("links",$arr,1);
        
        if($link){
@@ -120,8 +137,25 @@ if($id!=null){
 
      $link = $this->General_model->get_row("links",["id"=>$id]);
 
+
+
     if($link->status){
           $_POST["clicks"] +=$link->clicks;
+
+
+          $link = $this->input->post("link");
+
+          if(substr($link,0,8)=="https://"){
+              $link = substr($link,8);
+
+          }elseif(substr($link,0,7)=="http://"){
+              $link = substr($link,7);
+          }
+
+
+              $_POST["link"] = $link;
+
+
            $this->General_model->update_by_table("links",$_POST,["id"=>$id]);
     }
      

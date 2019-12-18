@@ -41,7 +41,7 @@
 
                                          
                                         <td>
-                                            <button data-toggle="tooltip" title="Edit" class="pd-setting-ed"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></button>
+                                            <a class="btn btn-danger" href="<?php echo base_url() ?>admin/links/delete/<?php echo $link->id ?>/mylinks" onClick="confirm('Want to delete?')">delete</a>
                                             <a href="<?php echo base_url() ?>admin/links/renew/<?php echo $link->id ?>" class="btn btn-success">renew</a>
                                             
                                         </td>

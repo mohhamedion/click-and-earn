@@ -24,10 +24,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 
-$status = 'test';
+$test = true;
+
 $site = 'http://localhost/click-earn/';
-if($status!='test'){
-	$site = "https://click-and-earn.com/";
+if($test){
+	$site = 'http://localhost/click-earn/';
+
+}else{
+		$site = "https://click-and-earn.com/";
+
 }
 
 $config['base_url'] = $site;

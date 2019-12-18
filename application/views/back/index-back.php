@@ -136,7 +136,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="footer-copy-right">
-                            <p>Copyright © 2019. Click & Eearn</a></p>
+                            <p>Copyright © <?php echo date("Y"); ?>. Click & Eearn</a></p>
                         </div>
                     </div>
                 </div>

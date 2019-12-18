@@ -26,7 +26,7 @@
                                             
                                             <div class="review-content-section">
                                                 <div id="dropzone1" class="pro-ad addcoursepro">
-<h4>link your Domain to our platform</h4>
+<h4>link your Domain to our platform 🌐</h4>
 
 
 
@@ -40,9 +40,12 @@
 
                                                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                                                 <div class="form-group">
+                                                             <label>Website name</label>
+   
                                                                     <input name="website_name" type="text" class="form-control" placeholder="Name of your website" required>
                                                                 </div>
                                                                 <div class="form-group">
+                                                                      <label>Domain</label>
                                                                     <input name="link" type="link" class="form-control" placeholder="you domain" required>
                                                                 </div>
                                                            

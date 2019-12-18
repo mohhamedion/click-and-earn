@@ -111,11 +111,11 @@
 					<div class="col-md-6 wow fadeInLeft" data-wow-delay="0.6s">
 						<h2 class="text-uppercase site-color">Withdrawal</h2>
 						 
-						<p class="font-20"><span><i class="fa fa-dollar "></i></span>Minimum wathdrawal 0.20 $
+						<p class="font-20"><span><i class="fa fa-dollar "></i></span>Minimum wathdrawal 0.1 $
           Withdrawal methods paypal ,skrill.</p>
  					</div>
 					<div class="col-md-6   wow fadeInRight" data-wow-delay="0.6s">
-						 <div class="dollar text-right">0.20$</div>
+						 <div class="dollar text-right">0.1$</div>
 					</div>
 				</div>
 			</div>
@@ -245,7 +245,7 @@
 		<footer>
 			<div class="container">
 				<div class="row">
-					<p>Copyright © 2084 Your Company Name</p>
+					<p>Copyright © <?php echo date("Y"); ?> Your Company Name</p>
 				</div>
 			</div>
 		</footer>

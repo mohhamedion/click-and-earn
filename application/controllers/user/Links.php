@@ -99,6 +99,18 @@ $query2 = "select * from links where status !='draft'  AND clicks >0";
  $link = $this->General_model->get_row("links",["id"=>$id]);
 
 if($link->status=="draft"){
+
+
+         $linkFromDb = $this->input->post("link");
+
+         if(substr($linkFromDb,0,8)=="https://"){
+            $linkFromDb = substr($linkFromDb,8);
+
+        }elseif(substr($linkFromDb,0,7)=="http://"){
+            $linkFromDb = substr($linkFromDb,7);
+        }
+            $_POST["link"] = $linkFromDb;
+
        $this->General_model->update_by_table("links",$_POST,["id"=>$id]);
 }
  
@@ -118,7 +130,17 @@ public function APIaddlink(){
 		 $arr =  $_POST;
         $arr['user_id'] = $this->session->userdata("user_id");
         $arr['status'] = "draft";
-         
+
+        $link = $this->input->post("link");
+
+         if(substr($link,0,8)=="https://"){
+            $link = substr($link,8);
+
+        }elseif(substr($link,0,7)=="http://"){
+            $link = substr($link,7);
+        }
+       $arr["link"] = $link;
+
 		 $new_id = $this->General_model->create_by_table("links",$arr,1);
 
 		if($new_id){
