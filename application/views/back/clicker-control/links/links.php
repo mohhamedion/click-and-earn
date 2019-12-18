@@ -22,7 +22,7 @@
                                         <td><?php echo $link->id; ?></td>
                                          <td><?php echo $link->website_name; ?></td>
                                         <td>
-                                            <a 
+                                    <!--         <a 
                                             class="link"
                                             id = "<?php echo $link->id ?>" 
                                             link="http://<?php echo $link->link; ?>" 
@@ -30,7 +30,10 @@
                                             rel="noopener noreferrer">
                                             <?php echo $link->link; ?>
                                                 
-                                            </a>
+                                            </a> -->
+
+
+                 <a   class="link" href="#" data-link="<?php echo base_url() ?>user/links/render_link/<?php echo $link->link; ?>/<?php echo $link->id ?>"><?php echo $link->link ?></a>
                                         </td>
                                         <td>
                                             <button class="pd-setting"><?php echo $link->clicks; ?></button>
@@ -70,10 +73,9 @@
  let base_url = "<?php echo base_url(); ?>";
 
 $(".link").click(function(){
-id = $(this).attr("id");
+ let link = $(this).attr("data-link");
 
-openURL($(this).attr("link"),id);
-
+          window.open(link,'_blank','width=300,height=300');
 
 
  
@@ -81,24 +83,23 @@ openURL($(this).attr("link"),id);
 })
 
 
-function openURL(link,id){
-          window.open(link,'_blank','width=300,height=300');
+// function openURL(link,id){
 
 
 
-$.ajax({
+// $.ajax({
 
-    url:base_url+"user/links/APIclickLink",
-    type:"POST",
-    data:{id:id},
-     success:function(data){
-    $(".row_link_"+id).remove();
+//     url:base_url+"user/links/APIclickLink",
+//     type:"POST",
+//     data:{id:id},
+//      success:function(data){
+//     $(".row_link_"+id).remove();
 
 
-    }
+//     }
  
-});
-}
+// });
+// }
 // let template =``;
 
 // $.ajax({

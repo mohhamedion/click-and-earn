@@ -21,6 +21,17 @@ redirect(base_url()."welcome/login");
 
  
 
+
+
+public function render_link($link,$id){
+
+      $data["link"]  = $link;
+      $data["id"]  = $id;
+
+      $this->load->view('back/clicker-control/links/link-render',$data);
+
+
+}
 	public function index()
 	{
  
